@@ -6,7 +6,8 @@
 	<title>Flower shop</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script defer type="text/javascript" src="script/script.js"></script>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- To avoid favicon.ico error -->
+	<script defer type="module" src="script/script.js"></script>
 </head>
 <body>
 	<!--Header-->
@@ -91,8 +92,8 @@
 			<div class="container">
 				<div class="catalogue">
 					<h2 >Каталог</h2>
-					<div class="catalogue_items_list">
-						<div class="catalogue_item">
+					<div class="catalogue_items_list" id="catalogue_items_list">
+						<!-- <div class="catalogue_item">
 							<img src="images/bouquet_cart1.png">
 							<p>Ніжна свіжість:<br>
 							 троянди та лілії</p>
@@ -133,7 +134,7 @@
 							 червоних троянд</p>
 							<p>465 грн</p>
 							<button class="catalogue_in_basket">В кошик</button>
-						</div>
+						</div> -->
 					</div>
 					<div class="catalogue_pagination">
 						<img class="catalogue_pagination_left_arrow_inactive" id="left_inactive_arrow" src="images/Arrow_2.png">
@@ -177,13 +178,6 @@
 						</div>
 					</div>
 					<div class="review_pagination" id="review_pagination">
-						<!-- <img class="catalogue_pagination_arrow" src="images/Arrow_2.png">
-						<img class="catalogue_pagination_ellipse" src="images/Ellipse_1.png">
-						<img class="catalogue_pagination_ellipse" src="images/Ellipse_2.png">
-						<img class="catalogue_pagination_ellipse" src="images/Ellipse_2.png">
-						<img class="catalogue_pagination_ellipse" src="images/Ellipse_2.png">
-						<img class="catalogue_pagination_ellipse" src="images/Ellipse_2.png">
-						<img class="catalogue_pagination_arrow" src="images/Arrow_1.png"> -->
 					</div>
 					<h3>Додати відгук:</h3>
 					<form action="#">
