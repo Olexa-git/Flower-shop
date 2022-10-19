@@ -131,23 +131,12 @@ function create_catalogue (page) {
 		for (let i=0; i<6; i++) {
 			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
 		}
-	} else if (page == 2) {
-		for (let i=2; i<8; i++) {
+	} else {
+		let first_item = (page-1)*2;
+		for (let i=first_item; i<first_item+6; i++) {
 			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
+			}
 		}
-	} else if (page == 3) {
-		for (let i=4; i<10; i++) {
-			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
-		}
-	} else if (page == 4) {
-		for (let i=6; i<12; i++) {
-			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
-		}
-	} else if (page == 5) {
-		for (let i=8; i<14; i++) {
-			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
-		}
-	}
-}
+	}	
 create_catalogue(product_catalogue_page);
 
