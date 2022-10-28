@@ -9,3 +9,17 @@ let review_right_arrow = document.getElementById('review_right_arrow');
 let review_left_arrow = document.getElementById('review_left_arrow');
 review_right_arrow.addEventListener('click', paginator.reviwe_pagination_right);
 review_left_arrow.addEventListener('click', paginator.reviwe_pagination_left);
+
+
+const navigation_lupa = document.getElementById('navigation_lupa');
+const header = document.getElementById('header');
+const search_field = document.getElementById('search_field');
+const search_button = document.getElementById('search_button');
+
+navigation_lupa.addEventListener('click', show_search);
+
+function show_search() {
+	search_field.classList.toggle('search_field_show');
+	search_button.classList.toggle('search_button_show');
+	header.classList.toggle('header_height');
+};

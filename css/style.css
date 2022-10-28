@@ -7,18 +7,23 @@
 	width: 760px;
 	margin: 0 auto;
 }
-button {
+button,
+.search_button {
 	cursor: pointer;
 }
 .invisible {
 	display: none;
 }
 /*Navigation*/
-
 .header {
 	background-color: #A9BFE4;
+	height: 88px;
+	transition: height 1s;
+}
+.header_height {
 	height: 70px;
 }
+
 nav .container {
 	display: flex;
 	position: relative;
@@ -64,7 +69,7 @@ nav .container {
 .navigation_basket {
 	left: 675px;
 }
-.navigation_link:hover { /*star making pink underline*/
+.navigation_link:hover { /*start making pink underline*/
   opacity: 1;
 }
 .navigation_link::before {
@@ -86,6 +91,45 @@ nav .container {
 	width: 27px;
 	height: 27px;
 	top: 25px;
+}
+.search_field {
+	visibility: hidden;
+	position: absolute;
+	top: 58px;
+	left: 502px;
+	width: 89px;
+	height: 26px;
+	border-radius: 50px;
+	border-width: 0;
+	outline: none;
+	transition: width 1s 1s, visibility 0s;
+}
+.search_button {
+	visibility: hidden;
+	position: absolute;
+	top: 58px;
+	left: 502px;
+	width: 89px;
+	height: 26px;
+	background: #FFC2C7;
+	border-radius: 50px;
+	border-width: 0;
+	font-weight: 400;
+	line-height: 13px;
+	text-align: center;
+	color: #FFFDFD;
+	transition: left 1s 1s, visibility 0s;
+}
+.search_field_show {
+	visibility: visible;
+	width: 236px;
+	transition: width 1s 1s, visibility 1s 0.5s;
+
+}
+.search_button_show {
+	visibility: visible;
+	left: 650px;
+	transition: left 1s 1s, visibility 1s 0.5s;
 }
 
 /*Main First Section*/
@@ -133,7 +177,8 @@ nav .container {
 }
 .in_basket:hover,
 .review_send:hover,
-.footer_subscription_submit:hover {
+.footer_subscription_submit:hover,
+.search_button:hover {
 	background: #FFB0B7;
 }
 .in_catalogue {
@@ -440,10 +485,10 @@ nav .container {
 	width: 100px;
 	height: 100px;
 	margin-left: 68px;
-	margin-top: 35px;
+	margin-top: 20px;
 }
 .review {
-	width: 335px;
+	width: 355px;
 	height: 105px;
 	margin: 20px 0 0 47px;
 }
@@ -460,6 +505,11 @@ nav .container {
 	border: 1px solid #FFC2C7;
 }
 .review_name {
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+}
+.review_name p {
 	font-weight: 600;
 	font-size: 13px;
 	line-height: 16px;

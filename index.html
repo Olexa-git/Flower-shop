@@ -11,17 +11,19 @@
 </head>
 <body>
 	<!--Header-->
-	<nav class="header">
+	<nav class="header header_height" id="header">
 		<div class="container">
 			<a href="#"><img class="header_logo" src="images/logo.png"></a>
 			<ul>
-				<li><a class="navigation_link navigation_link_underline" href="#">Каталог</a></li>
-				<li><a class="navigation_link navigation_link_underline" href="#">Про нас</a></li>
-				<li><a class="navigation_link navigation_link_underline" href="#">Збери букет</a></li>
-				<li><a class="navigation_link navigation_link_underline" href="#">Контакти</a></li>
+				<li><a class="navigation_link navigation_link_underline" href="#catalogue">Catalogue</a></li>
+				<li><a class="navigation_link navigation_link_underline" href="#about">About us</a></li>
+				<li><a class="navigation_link navigation_link_underline" href="#reviews">Reviews</a></li>
+				<li><a class="navigation_link navigation_link_underline" href="#footer">Contact us</a></li>
 			</ul>
-			<a href="#"><img class="navigation_lupa" src="images/lupa.png"></a>
+			<a href="#"><img class="navigation_lupa" id="navigation_lupa" src="images/lupa.png"></a>
 			<a href="#"><img class="navigation_basket" src="images/basket.png"></a>
+			<input class="search_field" id="search_field" type="text" name="search_field" placeholder="Search in catalogue">
+			<input class="search_button" id="search_button" type="button" name="search_button" value="Search">
 		</div>
 	</nav>
 	<!--Header-->
@@ -43,7 +45,7 @@
 		</article>
 		<article>
 			<div class="container">
-				<div class="about">
+				<div class="about"  id="about">
 					<div class="product_types">
 						<img src="images/bouquets.jpg">
 						<img src="images/natural_flowers.jpg">
@@ -90,51 +92,9 @@
 		</article>
 		<article>
 			<div class="container">
-				<div class="catalogue">
+				<div class="catalogue" id="catalogue">
 					<h2 >Каталог</h2>
 					<div class="catalogue_items_list" id="catalogue_items_list">
-						<!-- <div class="catalogue_item">
-							<img src="images/bouquet_cart1.png">
-							<p>Ніжна свіжість:<br>
-							 троянди та лілії</p>
-							<p>445 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div>
-						<div class="catalogue_item">
-							<img src="images/bouquet_cart2.png">
-							<p>Сорбет:<br>
-							 хризантеми та троянди</p>
-							<p>450 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div>
-						<div class="catalogue_item">
-							<img src="images/bouquet_cart3.png">
-							<p>Yellow Song:<br>
-							 соняшники та солідаго</p>
-							<p>455 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div>
-						<div class="catalogue_item">
-							<img src="images/bouquet_cart4.png">
-							<p>Персиковий нектар:<br>
-							 лілії та троянди</p>
-							<p>470 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div>
-						<div class="catalogue_item">
-							<img src="images/bouquet_cart5.png">
-							<p>Аврора:<br>
-							 лілії та троянди</p>
-							<p>440 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div>
-						<div class="catalogue_item">
-							<img src="images/bouquet_cart6.png">
-							<p>Класика кохання:<br>
-							 червоних троянд</p>
-							<p>465 грн</p>
-							<button class="catalogue_in_basket">В кошик</button>
-						</div> -->
 					</div>
 					<div class="catalogue_pagination">
 						<img class="catalogue_pagination_left_arrow_inactive" id="left_inactive_arrow" src="images/Arrow_2.png">
@@ -157,25 +117,33 @@
 		</article>
 		<article>
 			<div class="container">
-				<div class="reviews">
+				<div class="reviews" id="reviews">
 					<img class="reviews_flower1" src="images/flowers_1.png">
 					<img class="reviews_flower2" src="images/flowers_2.png">
 					<h2>Відгуки</h2>
-					<div class="review_cart1">
-						<img src="images/reviews-photo2.png">
-						<div class="review">
-							<p class="review_content">“Сам не фахівець з квітів, але дружині дуже сподобався оригінальний весняний букет, зібраний із позитивним настроєм. Залишаю свій позитивний відгук магазину на вул. Добровольчих батальонів.”</p>
-							<div class="review_line"></div>
-							<p class="review_name">Володимир 16.06.22</p>
+					<div id="client_reviews">
+						<!-- <div class="review_cart1">
+							<img src="images/reviews-photo2.png">
+							<div class="review">
+								<p class="review_content">“Сам не фахівець з квітів, але дружині дуже сподобався оригінальний весняний букет, зібраний із позитивним настроєм. Залишаю свій позитивний відгук магазину на вул. Добровольчих батальонів.”</p>
+								<div class="review_line"></div>
+								<div class="review_name">
+									<p>Володимир</p>
+									<p>16.06.22</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="review_cart2">
-						<img src="images/reviews-photo1.png">
-						<div class="review">
-							<p class="review_content">“Замовляла квіти у неробочий час (увечері), але зі мною дуже оперативно зв'язався співробітник та пообіцяв доставити букет вранці у призначений час. Так і сталося, квіти були доставлені з точністю секунда в секунду, свіжі та красиві. Рекомендую.”</p>
-							<div class="review_line"></div>
-							<p class="review_name">Людмила 03.04.22</p>
-						</div>
+						<div class="review_cart2">
+							<img src="images/reviews-photo1.png">
+							<div class="review">
+								<p class="review_content">“Замовляла квіти у неробочий час (увечері), але зі мною дуже оперативно зв'язався співробітник та пообіцяв доставити букет вранці у призначений час. Так і сталося, квіти були доставлені з точністю секунда в секунду, свіжі та красиві. Рекомендую.”</p>
+								<div class="review_line"></div>
+								<div class="review_name">
+									<p>Людмила</p>
+									<p>03.04.22</p>
+								</div>
+							</div>
+						</div> -->
 					</div>
 					<div class="review_pagination" id="review_pagination">
 					</div>
@@ -226,16 +194,16 @@
 	<!-- Main content -->
 	<!-- Footer -->
 	<footer>
-		<div class="footer">
+		<div class="footer" id="footer">
 			<div class="container">
 				<div class="footer_content">
 					<img class="footer_logo" src="images/logo.png">
 					<ul>
 						<li>
 							<p class="footer_li_header">Контакти</p>
-							<p class="footer_li_description">(095) 000 00 00 <br>
-								(097) 000 00 00 <br>
-								Ми працюємо цілодобово</p>
+							<p class="footer_li_description">1-800-356-7257<br>
+								630-719-5200 <br>
+								We work 24/7</p>
 						</li>
 						<li>
 							<p class="footer_li_header">Інформація</p>

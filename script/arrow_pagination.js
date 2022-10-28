@@ -1,4 +1,5 @@
 import { catalogue } from './catalogue.js';
+import { reviews } from './reviews.js';
 let product_catalogue_page = 1;
 let review_page = 1;
 const catalogue_left_active_arrow = document.getElementById('left_active_arrow');
@@ -12,6 +13,7 @@ let review_right_arrow;
 let review_left_arrow;
 
 const catalogue_items_list = document.getElementById('catalogue_items_list');
+const client_reviews = document.getElementById('client_reviews');
 
 export function catalogue_pagination_right () {
 	catalogue_active_elipses[product_catalogue_page-1].classList.add('invisible');
@@ -19,7 +21,7 @@ export function catalogue_pagination_right () {
 	catalogue_active_elipses[product_catalogue_page].classList.remove('invisible');
 	catalogue_inactive_elipses[product_catalogue_page].classList.add('invisible');
 	product_catalogue_page++;
-	create_catalogue(product_catalogue_page);
+	create_catalogue_page(product_catalogue_page);
 	if (product_catalogue_page == 2) {
 		catalogue_left_active_arrow.classList.remove('invisible');
 		catalogue_left_inactive_arrow.classList.add('invisible');	
@@ -34,7 +36,7 @@ export function catalogue_pagination_left () {
 	catalogue_active_elipses[product_catalogue_page-2].classList.remove('invisible');
 	catalogue_inactive_elipses[product_catalogue_page-2].classList.add('invisible');
 	product_catalogue_page--;
-	create_catalogue(product_catalogue_page);
+	create_catalogue_page(product_catalogue_page);
 	if (product_catalogue_page == 4) {
 		catalogue_right_inactive_arrow.classList.add('invisible');
 		catalogue_right_active_arrow.classList.remove('invisible');
@@ -99,6 +101,7 @@ export function reviwe_pagination_right() {
 		review_left_arrow = document.getElementById('review_left_arrow');
 		review_left_arrow.addEventListener('click', reviwe_pagination_left);
 		}
+		create_client_reviews();
 	}
 export function reviwe_pagination_left() {
 	if (review_page > 1) {
@@ -110,6 +113,7 @@ export function reviwe_pagination_left() {
 		review_left_arrow = document.getElementById('review_left_arrow');
 		review_left_arrow.addEventListener('click', reviwe_pagination_left);
 		}
+		create_client_reviews();
 	}
 
 function create_catalogue_item(cat_item) {
@@ -125,7 +129,7 @@ function create_catalogue_item(cat_item) {
 	return template.content;
 }
 
-function create_catalogue (page) {
+function create_catalogue_page (page) {
 	catalogue_items_list.innerHTML = '';
 	if (page == 1) {
 		for (let i=0; i<6; i++) {
@@ -138,5 +142,26 @@ function create_catalogue (page) {
 			}
 		}
 	}	
-create_catalogue(product_catalogue_page);
 
+function create_review_item(rew_item, cart_num) {
+	const template = document.createElement('template');	
+	const item = `<div class="review_cart${cart_num}">
+						<img src="${rew_item.image}">
+						<div class="review">
+							<p class="review_content">“${rew_item.review_text}”</p>
+							<div class="review_line"></div>
+							<div class="review_name">
+								<p>${rew_item.name}</p>
+								<p>${rew_item.date}</p>
+							</div>
+						</div>`;
+	template.innerHTML = item;
+	return template.content;
+}
+function create_client_reviews() {
+	client_reviews.innerHTML = '';
+	client_reviews.appendChild(create_review_item(reviews[review_page-1], 1));
+	client_reviews.appendChild(create_review_item(reviews[review_page], 2));
+}
+create_catalogue_page(product_catalogue_page);
+create_client_reviews();
