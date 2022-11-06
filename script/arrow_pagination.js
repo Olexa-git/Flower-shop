@@ -1,5 +1,6 @@
 import { catalogue } from './catalogue.js';
 import { reviews } from './reviews.js';
+let product_catalogue = catalogue.slice();
 let product_catalogue_page = 1;
 let review_page = 1;
 const catalogue_left_active_arrow = document.getElementById('left_active_arrow');
@@ -29,8 +30,9 @@ export function catalogue_pagination_right () {
 		catalogue_right_inactive_arrow.classList.remove('invisible');
 		catalogue_right_active_arrow.classList.add('invisible');
 	}
-}
-export function catalogue_pagination_left () {
+};
+
+export function catalogue_pagination_left() {
 	catalogue_active_elipses[product_catalogue_page-1].classList.add('invisible');
 	catalogue_inactive_elipses[product_catalogue_page-1].classList.remove('invisible');
 	catalogue_active_elipses[product_catalogue_page-2].classList.remove('invisible');
@@ -44,7 +46,20 @@ export function catalogue_pagination_left () {
 		catalogue_left_active_arrow.classList.add('invisible');
 		catalogue_left_inactive_arrow.classList.remove('invisible');
 	}
-}
+};
+
+function catalogue_first_page () {
+	for (let i = 0; i<=4; i++) {
+		catalogue_active_elipses[i].classList.add('invisible');
+		catalogue_inactive_elipses[i].classList.remove('invisible');
+	}
+	catalogue_active_elipses[0].classList.remove('invisible');
+	catalogue_inactive_elipses[0].classList.add('invisible');
+	catalogue_right_inactive_arrow.classList.add('invisible');
+	catalogue_right_active_arrow.classList.remove('invisible');
+	catalogue_left_active_arrow.classList.add('invisible');
+	catalogue_left_inactive_arrow.classList.remove('invisible');
+};
 
 export function create_review_pagination() {
 	const fragment = document.createDocumentFragment();
@@ -123,7 +138,7 @@ function create_catalogue_item(cat_item) {
 				  <p>${cat_item.title}<br>
 				  ${cat_item.description}</p>
 				  <p>${cat_item.price}</p>
-				  <button class="catalogue_in_basket">In basket</button>
+				  <button class="catalogue_in_basket">Add to basket</button>
 				  </div>`;
 	template.innerHTML = item;
 	return template.content;
@@ -132,16 +147,41 @@ function create_catalogue_item(cat_item) {
 function create_catalogue_page (page) {
 	catalogue_items_list.innerHTML = '';
 	if (page == 1) {
-		for (let i=0; i<6; i++) {
-			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
+		if (product_catalogue.length >= 6) {
+			for (let i=0; i<6; i++) {
+				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+				}
+		} else {
+			for (let i=0; i<product_catalogue.length; i++) {
+				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+				}
 		}
 	} else {
 		let first_item = (page-1)*2;
-		for (let i=first_item; i<first_item+6; i++) {
-			catalogue_items_list.appendChild(create_catalogue_item(catalogue[i]));
-			}
+		if (product_catalogue.slice(first_item).length >= 6) {	
+			for (let i=first_item; i<first_item+6; i++) {
+				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+				}
+		} else {
+			for (let i=first_item; i<first_item+product_catalogue.slice(first_item).length; i++) {
+				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+				}
 		}
 	}	
+};
+// function create_catalogue_page (page) {
+// 	catalogue_items_list.innerHTML = '';
+// 	if (page == 1) {
+// 		for (let i=0; i<6; i++) {
+// 			catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+// 		}
+// 	} else {
+// 		let first_item = (page-1)*2;
+// 		for (let i=first_item; i<first_item+6; i++) {
+// 			catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
+// 			}
+// 		}
+// 	};
 
 function create_review_item(rew_item, cart_num) {
 	const template = document.createElement('template');	
@@ -165,3 +205,23 @@ function create_client_reviews() {
 }
 create_catalogue_page(product_catalogue_page);
 create_client_reviews();
+
+export function search_in_catalogue() {
+	product_catalogue = [];
+	for (let i = 0; i<catalogue.length; i++){
+		if (search_engine(catalogue[i]) == 1) {
+			product_catalogue.push(catalogue[i]);
+		}
+	}
+	product_catalogue_page = 1;
+	create_catalogue_page(product_catalogue_page);
+	catalogue_first_page();
+};
+
+function search_engine(value) {
+	if ((value.title.toLowerCase().search(search_field.value.toLowerCase())) >= 0) {
+		return 1;
+	} else if ((value.description.toLowerCase().search(search_field.value.toLowerCase())) >= 0) {
+		return 1;
+	};
+};
