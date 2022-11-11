@@ -135,9 +135,9 @@ function create_catalogue_item(cat_item) {
 	const template = document.createElement('template');
 	const item = `<div class="catalogue_item">
 				  <img src="${cat_item.image}">
-				  <p>${cat_item.title}<br>
+				  <p>${cat_item.title}:<br>
 				  ${cat_item.description}</p>
-				  <p>${cat_item.price}</p>
+				  <p>$ ${cat_item.price}</p>
 				  <button class="catalogue_in_basket">Add to basket</button>
 				  </div>`;
 	template.innerHTML = item;
