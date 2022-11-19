@@ -17,7 +17,7 @@
 			<ul>
 				<li><a class="navigation_link navigation_link_underline" href="#anchor_for_href_cataloge">Catalogue</a></li>
 				<li><a class="navigation_link navigation_link_underline" href="#in_catalogue_first_section">About us</a></li>
-				<li><a class="navigation_link navigation_link_underline" href="#right_active_arrow">Reviews</a></li>
+				<li><a class="navigation_link navigation_link_underline" href="#reviews">Reviews</a></li>
 				<li><a class="navigation_link navigation_link_underline" href="#footer">Contact us</a></li>
 			</ul>
 			<img class="navigation_lupa" id="navigation_lupa" src="images/lupa.png">
@@ -35,24 +35,6 @@
 					</div>
 				</div>
 				<div class="basket_items" id="basket_items">
-					<!-- <div class="basket_item">
-						<p>"Long-awaited happiness"</p>
-						<img src="images/Headliner_bouquet.png" class="item_image">
-						<img src="images/trash_can.png" class="trash_can">
-						<p class="item_price">17.00 $</p>
-					</div>
-					<div class="basket_item">
-						<p>"Long-awaited happiness"</p>
-						<img src="images/Headliner_bouquet.png" class="item_image">
-						<img src="images/trash_can.png" class="trash_can">
-						<p class="item_price">17.00 $</p>
-					</div>
-					<div class="basket_item">
-						<p>"Long-awaited happiness"</p>
-						<img src="images/Headliner_bouquet.png" class="item_image">
-						<img src="images/trash_can.png" class="trash_can">
-						<p class="item_price">17.00 $</p>
-					</div> -->
 				</div>
 				<div class="basket_summary">
 					<p>Total:</p>
@@ -86,15 +68,15 @@
 						<img src="images/bouquets.jpg">
 						<img src="images/natural_flowers.jpg">
 						<img src="images/own_bouquet.png">
-						<button class="bouquets_button navigation_link">Bouquets</button>
-						<button class="live_flowers_button navigation_link">Fresh flowers</button>
-						<button class="own_bouquet_button navigation_link">"Your" bouquet</button>
+						<button class="bouquets_button navigation_link" id="bouquets_button">Bouquets</button>
+						<button class="live_flowers_button navigation_link" id="fresh_flowers">Fresh flowers</button>
+						<button class="own_bouquet_button navigation_link" id="your_bouquet">"Your" bouquet</button>
 					</div>
 					<div class="about_description">
 						<h3>About us</h3>
 						<div class="about_line"></div>
-						<p class="about_p1">Яких квітів тут лише немає! І садові, і польові, і кімнатні у глиняних горщиках. Очі розбігаються від такого достатку.</p>
-						<p class="about_p2">Тут представлена і багата колекція кімнатних рослин: кактуси різної форми та величини, ніжні фіалки, усипані квітами, аспарагуси, фікуси.</p>
+						<p class="about_p1">It's even hard to imagine what kind of flower we do not have in our shop! Garden, field, greenhouse, indoor in clay pots. Eyes widen from such abundance.</p>
+						<p class="about_p2">A rich collection of indoor plants is presented here: cacti of various shapes and sizes, delicate violets strewn with flowers, asparagus, ficuses.</p>
 					</div>
 					<img class="about_abstract_background" src="images/abstract_background.png">
 					<img class="about_women" src="images/women.png">
@@ -107,19 +89,19 @@
 		<article>
 			<div class="container">
 				<div class="marketing">
-					<h3>Працюємо для вас</h3>
+					<h3>We work for you!</h3>
 					<ul class="marketing_list">
 						<li><img src="images/constructor.png">
-							<p id="anchor_for_href_cataloge">Конструктрор унікального букета</p>
+							<p id="anchor_for_href_cataloge">Design your unique bouquet</p>
 						</li>
 						<li><img src="images/delivery.png">
-							<p>Безкоштовна доставка по місту до 2-х годин</p>
+							<p>Free delivery in the city up to 2 hours</p>
 						</li>
 						<li><img src="images/indoor.png">
-							<p>Наявність кімнатних рослин</p>
+							<p>Presence of indoor plants</p>
 						</li>
 						<li><img src="images/for_loved_ones.png">
-							<p>Вибір квітів для коханих, мам та друзів</p>
+							<p>Choosing flowers for loved ones, mothers and friends</p>
 						</li>
 					</ul>
 					<img class="marketing_abstract_background" src="images/abstract_background.png">
@@ -129,7 +111,7 @@
 		<article>
 			<div class="container">
 				<div class="catalogue" id="catalogue">
-					<h2 >Каталог</h2>
+					<h2 >Catalogue</h2>
 					<div class="catalogue_items_list" id="catalogue_items_list">
 					</div>
 					<div class="catalogue_pagination">
@@ -156,38 +138,16 @@
 				<div class="reviews" id="reviews">
 					<img class="reviews_flower1" src="images/flowers_1.png">
 					<img class="reviews_flower2" src="images/flowers_2.png">
-					<h2>Відгуки</h2>
+					<h2>Reviews</h2>
 					<div id="client_reviews">
-						<!-- <div class="review_cart1">
-							<img src="images/reviews-photo2.png">
-							<div class="review">
-								<p class="review_content">“Сам не фахівець з квітів, але дружині дуже сподобався оригінальний весняний букет, зібраний із позитивним настроєм. Залишаю свій позитивний відгук магазину на вул. Добровольчих батальонів.”</p>
-								<div class="review_line"></div>
-								<div class="review_name">
-									<p>Володимир</p>
-									<p>16.06.22</p>
-								</div>
-							</div>
-						</div>
-						<div class="review_cart2">
-							<img src="images/reviews-photo1.png">
-							<div class="review">
-								<p class="review_content">“Замовляла квіти у неробочий час (увечері), але зі мною дуже оперативно зв'язався співробітник та пообіцяв доставити букет вранці у призначений час. Так і сталося, квіти були доставлені з точністю секунда в секунду, свіжі та красиві. Рекомендую.”</p>
-								<div class="review_line"></div>
-								<div class="review_name">
-									<p>Людмила</p>
-									<p>03.04.22</p>
-								</div>
-							</div>
-						</div> -->
 					</div>
 					<div class="review_pagination" id="review_pagination">
 					</div>
-					<h3>Додати відгук:</h3>
+					<h3>Add review:</h3>
 					<form action="#">
-						<input class="add_review_name" type="text" name="add_review_name" placeholder=" Ваше ім'я:">
-						<textarea class="add_review_content" placeholder="Ваш відгук:"></textarea>
-						<input type="submit" name="review_send" class="review_send" value="Відправити">
+						<input class="add_review_name" type="text" name="add_review_name" placeholder=" Your name:">
+						<textarea class="add_review_content" placeholder="You review:"></textarea>
+						<input type="submit" name="review_send" class="review_send" value="Send">
 					</form>
 				</div>
 			</div>
@@ -195,31 +155,31 @@
 		<article>
 			<div class="container">
 				<div class="delivery">
-					<div class="delivery_header">Доставка і оплата</div>
+					<div class="delivery_header">Delivery and payment</div>
 					<div class="delivery_path">
 						<div class="delivery_step">
 							<p class="delivery_step_number">1</p>
-							<p class="delivery_step_description">Ви замовляєте букет через каталог</p>
+							<p class="delivery_step_description">Choose bouquet in catalogue and order it using basket</p>
 						</div>
 						<div class="delivery_step">
 							<p class="delivery_step_number">2</p>
-							<p class="delivery_step_description">Ви оплачуєте товар через картку VISA або MC, або Приват24</p>
+							<p class="delivery_step_description">You pay for the product using a VISA or MasterCard</p>
 						</div>
 						<div class="delivery_step">
 							<p class="delivery_step_number">3</p>
-							<p class="delivery_step_description">Вам передзвонять наші менеджери, якщо потрібно щось уточнити</p>
+							<p class="delivery_step_description">Our managers will call you back if something needs to be clarified</p>
 						</div>
 						<div class="delivery_step">
 							<p class="delivery_step_number">4</p>
-							<p class="delivery_step_description">Надсилаємо фото зібраного букета, щоб узгодити все</p>
+							<p class="delivery_step_description">We send a photo of the assembled bouquet to coordinate everything</p>
 						</div>
 						<div class="delivery_step">
 							<p class="delivery_step_number">5</p>
-							<p class="delivery_step_description">Доставляємо букет одержувачу протягом 2-х годин</p>
+							<p class="delivery_step_description">We deliver the bouquet within 2 hours</p>
 						</div>
 						<div class="delivery_step">
 							<p class="delivery_step_number">6</p>
-							<p class="delivery_step_description">Сповістимо Вас дзвінком або повідомленням про доставку букета</p>
+							<p class="delivery_step_description">We will notify you with a call or message about the delivery of the bouquet</p>
 						</div>
 					</div>
 					<img class="delivery_flower" src="images/flowers_3.png">
@@ -236,27 +196,27 @@
 					<img class="footer_logo" src="images/logo.png">
 					<ul>
 						<li>
-							<p class="footer_li_header">Контакти</p>
+							<p class="footer_li_header">Contacts</p>
 							<p class="footer_li_description">1-800-356-7257<br>
 								630-719-5200 <br>
 								We work 24/7</p>
 						</li>
 						<li>
-							<p class="footer_li_header">Інформація</p>
-							<p class="footer_li_description">Про нас <br>
-							 Хіт продажу<br>
-							 Відгуки <br>
-							 Доставка і оплата</p>
+							<p class="footer_li_header">Information</p>
+							<p class="footer_li_description">About us<br>
+							 A sale hit<br>
+							 Reviews<br>
+							 Delivery and payment</p>
 						</li>
 						<li>
-							<p class="footer_li_header">Каталог</p>
-							<p class="footer_li_description">Збери свій букет<br>
-							 Живі квіти<br>
-							 Кімнатні рослини</p>
+							<p class="footer_li_header">Catalogue</p>
+							<p class="footer_li_description">Create your bouquet<br>
+							 Fresh flowers<br>
+							 Houseplants</p>
 						</li>
 					</ul>
-					<input class="footer_subscription_email" type="email" name="subscription_email" placeholder="Введіть свій e-mail:">
-					<input class="footer_subscription_submit" type="submit" name="subscription_submit" value="Підписатися">
+					<input class="footer_subscription_email" type="email" name="subscription_email" placeholder="Enter your e-mail:">
+					<input class="footer_subscription_submit" type="submit" name="subscription_submit" value="Subscribe">
 					<p class="footer_copyright">Copyright Ⓒ 2022</p>
 					<a target="_blank" href="https://www.instagram.com/ukraine.ua/"><img class="footer_inst" src="images/inst.png"></a>
 					<a target="_blank" href="https://www.facebook.com/ukraine"><img class="footer_fb" src="images/fb.png"></a>

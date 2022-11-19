@@ -1,6 +1,9 @@
 import { catalogue } from './catalogue.js';
 import { reviews } from './reviews.js';
-let product_catalogue = catalogue.slice();
+import { add_to_basket } from './basket.js';
+import { catalogue_anchor } from './script.js';
+
+export let product_catalogue = catalogue.slice();
 let product_catalogue_page = 1;
 let review_page = 1;
 const catalogue_left_active_arrow = document.getElementById('left_active_arrow');
@@ -156,6 +159,12 @@ function create_catalogue_page (page) {
 				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
 				}
 		}
+		const add_to_cat_btn_list = document.getElementsByClassName('catalogue_in_basket');
+		for (let it = 0; it < add_to_cat_btn_list.length; it++) {
+				add_to_cat_btn_list[it].addEventListener('click', ()=> {
+					add_to_basket(it);
+				});
+		};
 	} else {
 		let first_item = (page-1)*2;
 		if (product_catalogue.slice(first_item).length >= 6) {	
@@ -167,21 +176,14 @@ function create_catalogue_page (page) {
 				catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
 				}
 		}
-	}	
+		const add_to_cat_btn_list = document.getElementsByClassName('catalogue_in_basket');
+		for (let it = 0; it < add_to_cat_btn_list.length; it++) {
+				add_to_cat_btn_list[it].addEventListener('click', ()=> {
+					add_to_basket(it+first_item);
+				});
+			}
+		}
 };
-// function create_catalogue_page (page) {
-// 	catalogue_items_list.innerHTML = '';
-// 	if (page == 1) {
-// 		for (let i=0; i<6; i++) {
-// 			catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
-// 		}
-// 	} else {
-// 		let first_item = (page-1)*2;
-// 		for (let i=first_item; i<first_item+6; i++) {
-// 			catalogue_items_list.appendChild(create_catalogue_item(product_catalogue[i]));
-// 			}
-// 		}
-// 	};
 
 function create_review_item(rew_item, cart_num) {
 	const template = document.createElement('template');	
@@ -216,6 +218,7 @@ export function search_in_catalogue() {
 	product_catalogue_page = 1;
 	create_catalogue_page(product_catalogue_page);
 	catalogue_first_page();
+	catalogue_anchor.scrollIntoView();
 };
 
 function search_engine(value) {
@@ -225,3 +228,17 @@ function search_engine(value) {
 		return 1;
 	};
 };
+
+export function bouquets_catalogue () {
+	product_catalogue = [];
+	product_catalogue = catalogue.slice(0, 6);
+	product_catalogue.push(catalogue[12]);
+	product_catalogue.push(catalogue[13]);
+	create_catalogue_page(product_catalogue_page);
+}
+
+export function fresh_flowers_catalogue () {
+	product_catalogue = [];
+	product_catalogue = catalogue.slice(6, 12);
+	create_catalogue_page(product_catalogue_page);
+}
