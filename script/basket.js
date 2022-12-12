@@ -1,5 +1,4 @@
 import { product_catalogue } from './arrow_pagination.js';
-// Numbering of items in basket
 let items_number_in_basket = 0;
 const cat_btn1=document.getElementById('btn_add_to_bskt_section1');
 let items_in_basket = document.getElementById('items_in_basket');
@@ -23,7 +22,6 @@ export function add_to_basket(item) {
 
 cat_btn1.addEventListener('click', add_to_basket);
 
-// basket functionality
 const basket_icon = document.getElementById('navigation_basket');
 const basket = document.getElementById('basket');
 const basket_x_btn = document.getElementById('basket_x_btn');

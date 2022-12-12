@@ -6,6 +6,7 @@
 	<title>Flower shop</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
 	<link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- To avoid favicon.ico error -->
 	<script defer type="module" src="script/script.js"></script>
 </head>
@@ -14,11 +15,16 @@
 	<nav class="header header_height" id="header">
 		<div class="container">
 			<a href="#"><img class="header_logo" src="images/logo.png"></a>
-			<ul>
+			<ul class="header_content">
 				<li><a class="navigation_link navigation_link_underline" href="#anchor_for_href_cataloge">Catalogue</a></li>
 				<li><a class="navigation_link navigation_link_underline" href="#in_catalogue_first_section">About us</a></li>
 				<li><a class="navigation_link navigation_link_underline" href="#reviews">Reviews</a></li>
 				<li><a class="navigation_link navigation_link_underline" href="#footer">Contact us</a></li>
+			</ul>
+			<ul class="header_burger_menu" id="header_burger_menu">
+				<li></li>
+				<li></li>
+				<li></li>
 			</ul>
 			<img class="navigation_lupa" id="navigation_lupa" src="images/lupa.png">
 			<img class="navigation_basket" id="navigation_basket" src="images/basket.png">
@@ -28,7 +34,7 @@
 			<div class="basket invisible" id="basket">
 				<div class="basket_headline">
 					<h3>Basket</h3>
-					<div class="bsaket_mountain"></div>
+					<div class="basket_mountain"></div>
 					<div class="x_btn" id="basket_x_btn">
 						<div class="x_stick1"></div>
 						<div class="x_stick2"></div>	
@@ -206,7 +212,7 @@
 							<p class="footer_li_description">About us<br>
 							 A sale hit<br>
 							 Reviews<br>
-							 Delivery and payment</p>
+							 Delivery & payment</p>
 						</li>
 						<li>
 							<p class="footer_li_header">Catalogue</p>

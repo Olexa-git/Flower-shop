@@ -1,0 +1,306 @@
+@media screen and (max-width: 480px) {
+.container {
+	width: 420px;
+}
+.header {
+	width: 420px;
+	height: 88px;
+}
+.header_height {
+	height: 59px;
+}
+.header_logo {
+	width: 106.7px;
+	height: 43px;
+	left: 147px;
+	top: 8px;
+}
+.header_burger_menu {
+	display: block;
+}
+.navigation_lupa {
+	top: 19px;
+	left: 313px;
+}
+.navigation_basket {
+	top: 19px;
+	left: 346px;
+}
+.navigation_lupa:hover,
+.navigation_basket:hover {
+	width: 20px;
+	height: 20px;
+	top: 19px;
+}
+.search_field,
+.search_button {
+	left: 50px;
+}
+.search_button_show {
+	left: 261px;
+}
+.items_in_basket {
+	left: 370px;
+	top: 4px;
+	width: 13px;
+}
+.basket {
+	left: 135px;
+	top: 60px;
+}
+.basket_mountain {
+	left: 212px;
+}
+.header_content {
+	display: none;
+}
+
+/*Main First Section*/
+.first_section {
+	height: 531px;
+}
+.first_section_web_image {
+	display: none;
+}
+.first_section_mob_image {
+	display: block;
+	position: absolute;
+	left: 25px;
+	width: 350px;
+}
+.first_section_content h3 {
+	position: absolute;
+	width: 260px;
+	left: 70px;
+	top: 270px;
+	text-align: center;
+}
+.first_section_content p {
+	position: absolute;
+	width: 325px;
+	height: 54px;
+	left: 38px;
+	top: 360px;
+	text-align: center;
+}
+.in_basket {
+	left: 51px;
+	top: 441px;
+}
+.in_catalogue {
+	left: 218px;
+	top: 441px;
+}
+/*Second Section*/
+.about {
+	height: 886px;
+}
+.product_types {
+	display: inline-block;
+	font-size: 0;
+	margin-left: 35px;
+}
+.product_types img {
+	width: 330px;
+	height: 145px;
+}
+.product_types button {
+	left: 100px;
+	font-size: 14px;
+}
+.bouquets_button {
+	top: 58px;
+}
+.live_flowers_button {
+	top: 203px;	
+}
+.own_bouquet_button {
+	top: 348px;
+}
+.about_description h3,
+.about_p1,
+.about_p2 {
+	left: 35px;
+}
+.about_p1,
+.about_p2 {
+	width: 330px;
+}
+.about_line {
+	display: none;
+}
+.about_abstract_background {
+	width: 291px;
+	height: 229px;
+	left: 109px;
+	top: 657px;
+}
+.about_women {
+	width: 310px;
+	left: 45px;
+	top: 705px;
+}
+.about_inst,
+.about_fb,
+.about_viber {
+	left: 349px;
+	width: 20px;
+	height: 23px;
+}
+.about_inst {
+	top: 694px;
+}
+.about_fb {
+	top: 724px;
+}
+.about_viber {
+	width: 24px;
+	height: 25px;
+	left: 347px;
+	top: 754px;
+}
+/*Third Section*/
+.marketing_abstract_background {
+	display: none;
+}
+.marketing {
+	height: 295px;
+}
+.marketing h3 {
+	margin-left: 34px;
+	margin-top: 14px;
+}
+.marketing ul {
+	flex-wrap: wrap;
+	margin-left: 34px;
+}
+/*Forth Section*/
+.catalogue {
+	height: 1099px;
+}
+.catalogue h2 {
+	margin-left: 34px;
+	margin-top: 34px;
+}
+.catalogue_items_list {
+	width: 350px;
+	margin-left: 34px;
+	justify-content: space-between;
+}
+.catalogue_item {
+	width: 155px;
+	height: 300px;
+}
+.catalogue_item img {
+	width: 155px;
+	height: 159px;
+}
+.catalogue_in_basket {
+	left: 14px;
+	top: 249px;
+}
+.catalogue_pagination {
+	margin-left: 115px;
+	margin-top: 30px;
+}
+/*Fifth Section*/
+.reviews {
+	height: 885px;
+}
+.reviews_flower1,
+.reviews_flower2 {
+	display: none;
+}
+.reviews h2 {
+	margin-left: 34px;
+	padding-top: 18px;
+}
+.review_cart1 img,
+.review_cart2 img {
+	margin-left: 150px;
+}
+.review_cart1,
+.review_cart2 {
+	display: block;
+}
+.review {
+	width: 329px;
+	height: 105px;
+	margin: 20px 0 0 34px;
+}
+.review_line {
+	display: none;
+}
+.review_cart2 {
+	margin: 0;
+}
+.review_pagination {
+	margin-left: 115px;
+	margin-top: 60px;
+	height: 30px;
+}
+.reviews h3 {
+	margin: 5px 0 10px 34px;
+}
+.add_review_name {
+	width: 329px;
+	margin: 0 0 12px 34px;
+}
+.add_review_content {
+	width: 329px;
+	margin: 0 0 15px 34px;
+}
+.review_send {
+	margin-left: 34px;
+}
+/*Sixth Section*/
+.delivery {
+	height: 607px;
+}
+.delivery_header {
+	left: 34px;
+	top: 32px;
+}
+.delivery_path {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-left: 34px;
+	padding-top: 60px;
+}
+.delivery_step {
+	width: 111 px;
+}
+.delivery_step_number {
+	margin: 20px 0 20px 25px;
+	width: 65px;
+	height: 65px;
+}
+.delivery_step_description {
+	width: 111px;
+}
+/*Footer*/
+.footer_logo {
+	width: 106.7px;
+	height: 43px;
+	left: 147px;
+	top: 121px;
+}
+.footer_copyright {
+	width: 85px;
+	left: 36px;
+	top: 103px;
+}
+.footer ul {
+	width: 320px;
+	left: 34px;
+	top: 0px;
+	justify-content: space-between;
+}
+}
+@media screen and (max-width: 760px) and (min-width: 480px) {
+	.header {
+	width: 760px;
+}
+}

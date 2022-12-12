@@ -26,7 +26,6 @@ button,
 .header_height {
 	height: 70px;
 }
-
 nav .container {
 	display: flex;
 	position: relative;
@@ -38,7 +37,7 @@ nav .container {
 	left: 63px;
 	top: 8px;
 }
-.header ul {
+.header_content {
 	display: flex;
 	justify-content: space-between;
 	padding: 0;
@@ -50,6 +49,23 @@ nav .container {
 	top: 30px;
 	list-style-type: none;
 }	
+.header_burger_menu {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 19px;
+	left: 22px;
+	list-style-type: none;
+	display: none;
+}
+.header_burger_menu li {
+	width: 30px;
+	margin-top: 5px;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+}
 .navigation_link {
 	text-decoration: none;
 	font-family: 'Lora';
@@ -169,7 +185,7 @@ nav .container {
 	font-weight: 400;
 	font-size: 18px;
 }
-.bsaket_mountain {
+.basket_mountain {
 	position: absolute;
 	left: 165px;
 	top: -21px;
@@ -195,6 +211,7 @@ nav .container {
 	border-color: #A9BFE4;
 	border-width: 0.5px;
 	cursor: pointer;
+	z-index: 1;
 }
 .x_stick1,
 .x_stick2 {
@@ -376,7 +393,6 @@ nav .container {
 	position: absolute;
 	width: 130px;
 	height: 30px;
-	top: 110px;
 
 	background-color: #A9BFE4;
 	color: #FFFFFF;
@@ -384,12 +400,15 @@ nav .container {
 }
 .bouquets_button {
 	left: 42px;
+	top: 110px;
 }
 .live_flowers_button {
-	left: 250px;	
+	left: 250px;
+	top: 110px;	
 }
 .own_bouquet_button {
 	left: 462px;
+	top: 110px;
 }
 .product_types button:hover{
 	background-color: #b6c6e0;
@@ -535,7 +554,6 @@ nav .container {
 .catalogue_items_list {
 	width: 650px;
 	display: flex;
-/*	justify-content: space-between;*/
 	flex-wrap: wrap;
 	margin-left: 70px;
 }

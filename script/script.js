@@ -11,6 +11,7 @@ export const catalogue_anchor = document.getElementById('anchor_for_href_catalog
 const bouquets_button = document.getElementById('bouquets_button');
 const fresh_flowers = document.getElementById('fresh_flowers');
 const your_bouquet = document.getElementById('your_bouquet');
+const burger_menu = document.getElementById('header_burger_menu');
 
 right_active_arrow.addEventListener('click', paginator.catalogue_pagination_right);
 left_active_arrow.addEventListener('click', paginator.catalogue_pagination_left);
@@ -47,3 +48,7 @@ fresh_flowers.addEventListener('click', () => {
 your_bouquet.addEventListener('click', () =>{
 	alert('Call us and we will help you to create your own bouquet!');
 });
+
+burger_menu.addEventListener('click', () => {
+	console.log("burger_clicked")
+})
